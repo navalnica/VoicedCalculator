@@ -11,6 +11,7 @@ Based on [hiamandeep/tkcalc](https://github.com/hiamandeep/tkcalc) repository.
 Written in python using `tkinter` and `winsound` standard libraries.
 
 Calculator voices each arithmetic operation, input digit and result of calculations.
+It plays separate audio files from `voice` folder that correspond to each digit and operation.
 
 ### How to run
 * Download the code
@@ -22,12 +23,16 @@ Calculator voices each arithmetic operation, input digit and result of calculati
 * Calculator is voiced with belarusian language.<br>
   In order to use it for other language you will also have to change filenames that are used in `calculator.py`.
 
+* Launch main script: `python calculator.py`
+
 ### Known issues:
 * `eval` is used instead of implementing own 
   [Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)<br>
   Yes, you can inject your own malicious code 👨‍💻🐱‍💻👩‍💻
 
 * For simplicity with using `eval`, interger division is implemented instead of calculating percent (% operation)
+
+* Calculation result is shown only after it is voiced. Need to first show the result and voice it afterwards.
 
 * If result of floating point operation is integer, it is still displayed as float (e.g. 42.0)
 
